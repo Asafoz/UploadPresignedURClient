@@ -51,6 +51,7 @@
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.Wpf.6.3.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
     </Reference>
@@ -80,6 +81,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="Interface\IShellViewModel.cs" />
     <Compile Include="MefTools\AggregateCatalogExt.cs" />
     <Compile Include="MefTools\AppInitBootstrapper.cs" />
@@ -117,6 +119,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\AWS-Wrapper-S3\AWSWrapperS3\AWSWrapperS3.csproj">
+      <Project>{215d812d-2957-41cf-b76a-73d3fb95419d}</Project>
+      <Name>AWSWrapperS3</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CompressModuel\CompressModuel.Contracts\CompressModuel.Contracts.csproj">
+      <Project>{1c30eebc-ccb5-4b82-8404-429909557891}</Project>
+      <Name>CompressModuel.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UploadPresignedURClient.MEFCopy\UploadPresignedURClient.MEFCopy.csproj">
+      <Project>{6b44b054-f4f6-4b3e-92a2-5d0eb89cd716}</Project>
+      <Name>UploadPresignedURClient.MEFCopy</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

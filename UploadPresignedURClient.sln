@@ -5,6 +5,14 @@ VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UploadPresignedURClient", "UploadPresignedURClient\UploadPresignedURClient.csproj", "{B4FCA4AA-83F8-4ABC-92D9-A7E17F1CA9B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWSWrapperS3", "..\AWS-Wrapper-S3\AWSWrapperS3\AWSWrapperS3.csproj", "{215D812D-2957-41CF-B76A-73D3FB95419D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompressModuel.Contracts", "..\CompressModuel\CompressModuel.Contracts\CompressModuel.Contracts.csproj", "{1C30EEBC-CCB5-4B82-8404-429909557891}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompressModuel", "..\CompressModuel\CompressModuel\CompressModuel.csproj", "{D566BDA3-72AC-4F46-8DB6-2A1674066587}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UploadPresignedURClient.MEFCopy", "UploadPresignedURClient.MEFCopy\UploadPresignedURClient.MEFCopy.csproj", "{6B44B054-F4F6-4B3E-92A2-5D0EB89CD716}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,22 @@ Global
 		{B4FCA4AA-83F8-4ABC-92D9-A7E17F1CA9B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4FCA4AA-83F8-4ABC-92D9-A7E17F1CA9B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4FCA4AA-83F8-4ABC-92D9-A7E17F1CA9B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{215D812D-2957-41CF-B76A-73D3FB95419D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{215D812D-2957-41CF-B76A-73D3FB95419D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{215D812D-2957-41CF-B76A-73D3FB95419D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{215D812D-2957-41CF-B76A-73D3FB95419D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C30EEBC-CCB5-4B82-8404-429909557891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C30EEBC-CCB5-4B82-8404-429909557891}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C30EEBC-CCB5-4B82-8404-429909557891}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C30EEBC-CCB5-4B82-8404-429909557891}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D566BDA3-72AC-4F46-8DB6-2A1674066587}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D566BDA3-72AC-4F46-8DB6-2A1674066587}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D566BDA3-72AC-4F46-8DB6-2A1674066587}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D566BDA3-72AC-4F46-8DB6-2A1674066587}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B44B054-F4F6-4B3E-92A2-5D0EB89CD716}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B44B054-F4F6-4B3E-92A2-5D0EB89CD716}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B44B054-F4F6-4B3E-92A2-5D0EB89CD716}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B44B054-F4F6-4B3E-92A2-5D0EB89CD716}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

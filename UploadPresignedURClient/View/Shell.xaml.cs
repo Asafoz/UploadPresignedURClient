@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Bolareshet.UploadPresignedURClient.Interface;
+using Bolareshet.UploadPresignedURClient.ViewModel;
 
 namespace Bolareshet.UploadPresignedURClient
 {
@@ -24,7 +25,7 @@ namespace Bolareshet.UploadPresignedURClient
     public partial class Shell : Window
     {
         [ImportingConstructor]
-        public Shell([Import(AllowDefault = true)]IShellViewModel viewModel)
+        public Shell([Import(AllowDefault = true)]ShellViewModel viewModel)
         {
             InitializeComponent();
 

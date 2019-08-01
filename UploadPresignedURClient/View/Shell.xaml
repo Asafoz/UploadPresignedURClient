@@ -4,9 +4,30 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bolareshet.UploadPresignedURClient"
+        xmlns:localConverters="clr-namespace:Bolareshet.UploadPresignedURClient.Converters"
         mc:Ignorable="d"
         Title="WPF Seed Window" Height="450" Width="800">
+    <Window.Resources>
+        <localConverters:BoolToVisibilityConverter
+         x:Key="boolToHiddenConverter"
+         TrueValue="Visible" FalseValue="Collapsed" />
+    </Window.Resources>
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ContentControl  Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" BorderThickness="0" Content="{Binding CompressUserControl, FallbackValue={x:Null} ,Mode=OneWay}"/>
+        <TextBox Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Margin="15" Width="Auto" Text="{Binding S3PresignedURL, FallbackValue={x:Null}}"/>
+        <Button Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1" Margin="15" Width="Auto" Content="Upload"  Command="{Binding UploadButtonCommand}" />
+        <Border Grid.Row="2" Grid.Column ="0" Grid.ColumnSpan ="3" Margin="10" CornerRadius="4" >
+            <ProgressBar Height="25" Minimum="0" Maximum="450" Value="{Binding ValueProgress}" Visibility="{Binding ShowTotalProcess , Converter={StaticResource boolToHiddenConverter}, FallbackValue=Visible}"/>
+        </Border>
     </Grid>
 </Window>
