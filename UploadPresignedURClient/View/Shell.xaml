@@ -27,7 +27,7 @@
         <TextBox Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Margin="15" Width="Auto" Text="{Binding S3PresignedURL, FallbackValue={x:Null}}"/>
         <Button Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1" Margin="15" Width="Auto" Content="Upload"  Command="{Binding UploadButtonCommand}" />
         <Border Grid.Row="2" Grid.Column ="0" Grid.ColumnSpan ="3" Margin="10" CornerRadius="4" >
-            <ProgressBar Height="25" Minimum="0" Maximum="450" Value="{Binding ValueProgress}" Visibility="{Binding ShowTotalProcess , Converter={StaticResource boolToHiddenConverter}, FallbackValue=Visible}"/>
+            <ProgressBar Height="25"  Minimum="{Binding MinimumProgress}" Maximum="{Binding MaximumProgress}" Value="{Binding ValueProgress, UpdateSourceTrigger=PropertyChanged}" Visibility="{Binding ShowTotalProcess, Converter={StaticResource boolToHiddenConverter}, FallbackValue=Visible}"/>
         </Border>
     </Grid>
 </Window>
